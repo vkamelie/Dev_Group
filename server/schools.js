@@ -1,4 +1,4 @@
-var schools = [
+export default [
   {
     id: 1,
     name: "App Acedemy",
