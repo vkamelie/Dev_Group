@@ -1,24 +1,27 @@
-drop table if exists users;
 drop table if exists reviews;
+drop table if exists users;
 
-create table users(
-user_id serial primary key
+ create table users(
+id serial primary key,
+username text
 );
-
 
 create table reviews(
 id serial primary key,
-author_id int references users(user_id),
-school text not null, 
+author_id integer references users(id),
+school_id integer,
 course text not null, 
-rate int not null,
+rate integer not null,
 post text not null
 );
 
-insert into users(user_id)
-values('1');
 
-insert into reviews(author_id, school, course, rate, post)
-values('1', 'devyM', 'webDev', 5, 'life chaninging yo'),
-('1', 'devyM', 'webDev', 5, 'life chaninging yo'),
-('1', 'devyM', 'webDev', 5, 'life chaninging yo');
+
+
+-- insert into users(user_id)
+-- values('1');
+
+-- insert into reviews(author_id, school_id, course, rate, post)
+-- values(1, 1, 'webDev', 5, 'life chaninging yo'),
+-- (1, 1, 'webDev', 5, 'life chaninging yo'),
+-- (1, 1, 'webDev', 5, 'life chaninging yo');
