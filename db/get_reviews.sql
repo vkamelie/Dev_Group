@@ -1,1 +1,1 @@
-select * from reviews where id = $1;
+select * from reviews where school_id = $1;
