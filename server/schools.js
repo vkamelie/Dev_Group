@@ -1,4 +1,4 @@
-export default [
+exports.data =  [
   {
     id: 1,
     name: "App Acedemy",
@@ -417,3 +417,4 @@ export default [
     ]
   }
 ];
+
