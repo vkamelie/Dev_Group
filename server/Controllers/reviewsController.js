@@ -1,7 +1,7 @@
 const { data } = require("../schools");
 
 module.exports = {
-  addReview: async (req, res, next) => {
+  addReview: async (req, res) => {
     //We will probably need to add LOGGED IN middleware here
     //We will need to talk about the data being sent up from the client, this is a rough draft
     //I imagine the user will fill in the course they took?
