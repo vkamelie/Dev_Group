@@ -8,6 +8,7 @@ const { PORT, CONNECTION_STRING } = process.env;
 const express = require("express");
 const app = express();
 const massive = require("massive");
+const sinon = require('sinon');
 //const session = require("express-session");
 
 // //Top level middlewares
