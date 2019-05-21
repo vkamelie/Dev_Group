@@ -6,7 +6,6 @@ import "./App.css"
 
 class App extends Component {
   render() {
-    console.log(this.props.location);
     return (
       <div className="App">
         {this.props.location.pathname != "/" ? <NavBar /> : <div />}
