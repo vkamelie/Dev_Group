@@ -18,10 +18,10 @@ post text not null
 
 
 
--- insert into users(user_id)
--- values('1');
+insert into users(username)
+values('Username');
 
--- insert into reviews(author_id, school_id, course, rate, post)
--- values(1, 1, 'webDev', 5, 'life chaninging yo'),
--- (1, 1, 'webDev', 5, 'life chaninging yo'),
--- (1, 1, 'webDev', 5, 'life chaninging yo');
+insert into reviews(author_id, school_id, course, rate, post)
+values(1, 1, 'webDev', 5, 'life chaninging yo'),
+(1, 1, 'webDev', 5, 'life chaninging yo'),
+(1, 1, 'webDev', 5, 'life chaninging yo');

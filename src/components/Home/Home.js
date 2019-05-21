@@ -38,14 +38,9 @@ class Home extends Component {
     return (
       <div>
         <div className="searchSet">
-          <input className="Searcher"
-            placeholder={"Type a School Name"}
-            type= "text"
-            value={this.state.input}
-            onChange={e => this.handleInput(e.target.value)}
-          />
+          <input placeholder={"Type a School Name"} type= 'text' value = {this.state.input} onChange = {e => this.handleInput(e.target.value)} />
           <button title="Submit" type="submit">
-            <img src={search} />
+            <img src={search} alt = 'icon' />
           </button>
         </div>
         <button onClick={this.showSearch}>Open</button>
