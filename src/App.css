@@ -4,14 +4,29 @@
 input {
   background-color: cadetblue;
   height: 17px;
-  width: 60%;
+  width: 50%;
   border: none;
   border-bottom: 2px solid;
-  /* background: transparent; */
+  background: transparent;
   outline: transparent;
   padding: 30px;
   margin: 55px auto;
   font-size: 40px;
+  overflow-y: scroll;
+}
+.show {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  width: 60%;
+  margin: 134px auto;
+  overflow-y: scroll;
 
+}
 
+.close {
+  display: none;
 }
