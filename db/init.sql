@@ -3,6 +3,9 @@ drop table if exists users;
 
  create table users(
 id serial primary key,
+auth0_id VARCHAR,
+email VARCHAR,
+profile_name TEXT,
 username text
 );
 

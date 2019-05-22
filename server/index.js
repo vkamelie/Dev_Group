@@ -1,3 +1,5 @@
+const authController = require("./Controllers/authController");
+
 const { data } = require("./schools");
 
 require("dotenv").config();
@@ -8,19 +10,19 @@ const { PORT, CONNECTION_STRING } = process.env;
 const express = require("express");
 const app = express();
 const massive = require("massive");
-const sinon = require('sinon');
-//const session = require("express-session");
+const sinon = require("sinon");
+const session = require("express-session");
 
-// //Top level middlewares
-// app.use(express.json());
-// app.use(
-//   session({
-//     secret: "keyboard cat",
-//     resave: false,
-//     saveUninitialized: true,
-//     cookie: { secure: true }
-//   })
-// );
+//Top level middlewares
+app.use(express.json());
+app.use(
+  session({
+    secret: "keyboard cat",
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: true }
+  })
+);
 
 //Database
 massive(CONNECTION_STRING)
@@ -38,6 +40,10 @@ const reviewsController = require("./Controllers/reviewsController");
 const schoolsController = require("./Controllers/schoolsControllers");
 
 //Endpoints
+
+//Auth endpoints
+app.get("/auth/callback", authController.login);
+app.get("/api/user-data", authController.getUser);
 
 //This returns all info for a school, which includes the reviews associated with it
 app.get("/schools/:id/reviews", reviewsController.getReviews);
